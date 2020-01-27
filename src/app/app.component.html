@@ -1,4 +1,43 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<mat-toolbar class="col-bg-header">
+        <div class="logo">
+          EquipMax. <span class="apptype">Software Management</span>
+        </div>
+      </mat-toolbar>
+      
+<div style="padding:10px">
+    <select >
+        <option>Select</option>
+        <option>Hii</option>
+        <option>Hello</option>
+    </select>
+
+    <br><br>
+
+    <mat-form-field style=" margin-bottom: -1.5em;margin-top: -0.5em">
+        <mat-label>Select</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let food of foods" [value]="food.value"> {{food.viewValue}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field style=" margin-bottom: -1.5em;margin-top: -0.5em">
+        <input matInput [matDatepicker]="picker" readonly placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <br><br>
+
+    <button mat-button class="stylepopupbuttonconfirm" >Submit</button>
+    <button mat-button  class="stylepopupbuttoncancel" >Cancel</button>
+
+    <br><br>
+
+        <input type="text" >
+    <!-- <input type="text" [matAutocomplete]="auto"> -->
+    <!-- <mat-autocomplete #auto="matAutocomplete">
+            <mat-option  *ngFor="let food of foods" [value]="food.value">{{food.viewValue}}</mat-option>
+        </mat-autocomplete> -->
+</div>
